@@ -118,3 +118,14 @@ dmypy.json
 
 #dir for loading images
 images/
+
+#instabot
+blacklist.txt
+comments.txt
+instabot.log
+*.checkpoint
+followed.txt
+friends.txt
+skipped.txt
+unfollowed.txt
+whitelist.txt
