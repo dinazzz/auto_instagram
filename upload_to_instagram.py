@@ -12,6 +12,7 @@ def upload_to_insta(login, password, directory):
     pictures = get_pictures_from_directory(directory)
     bot = Bot()
     bot.login(username=login, password=password)
+    bot.api.last_response.raise_for_status()
     unsuccess = []
     for i, pic in enumerate(pictures):
         print(f'\n{i+1}/{len(pictures)} Загружаем изображение {pic}')
