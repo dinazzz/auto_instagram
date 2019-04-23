@@ -31,11 +31,11 @@ fetch_spacex_last_launch(directory_for_images)
 ```
 Модуль `upload_to_instagram.py` заливает все изображения из указанной в качестве аргумента директории в аккаунт Instagram:
 ```python
-    load_dotenv()
-    insta_login = getenv('LOGIN')
-    insta_password = getenv('PASSWORD')
-    directory_for_images = 'test_directory'
-    upload_to_insta(insta_login, insta_password, directory_for_images)
+load_dotenv()
+insta_login = getenv('LOGIN')
+insta_password = getenv('PASSWORD')
+directory_for_images = 'test_directory'
+upload_to_insta(insta_login, insta_password, directory_for_images)
 ```
 Результат работы `upload_to_instagram.py`:
 ```python
