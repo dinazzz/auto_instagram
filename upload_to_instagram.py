@@ -15,9 +15,8 @@ def upload_to_insta(login, password, directory):
     bot.api.last_response.raise_for_status()
     unsuccess = []
     for i, pic in enumerate(pictures):
-        print(f'\n{i+1}/{len(pictures)} Загружаем изображение {pic}')
         bot.upload_photo(pic, caption=f'Picture {i}')
         if bot.api.last_response.status_code != 200:
             unsuccess.append(pic)
     if unsuccess:
-        print('\nНе удалось загрузить изображения:', *unsuccess, sep='\n')
+        return unsuccess
